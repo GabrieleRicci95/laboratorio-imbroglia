@@ -185,7 +185,7 @@ function App() {
               </div>
               <div className="contact-item">
                 <Clock size={24} />
-                <span>Lun - Ven: 08:30 - 19:00</span>
+                <span>Lun - Ven: 09:00 - 13:00 / 15:00 - 18:00</span>
               </div>
             </div>
             
