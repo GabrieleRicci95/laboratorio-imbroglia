@@ -108,7 +108,7 @@ function App() {
               <span className="primary-text">al servizio del tuo Sorriso</span>
             </h1>
             <p className="hero-subtitle">
-              Dal 1992, il Laboratorio Odontotecnico di Marco Imbroglia offre soluzioni protesiche di altissima qualità per dentisti e professionisti del settore.
+              Dal 1997, il Laboratorio Odontotecnico di Marco Imbroglia offre soluzioni protesiche di altissima qualità per dentisti e professionisti del settore.
             </p>
             <div className="btn-group">
               <a href="#servizi" className="btn btn-primary">
@@ -232,13 +232,10 @@ function App() {
           
           <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '2rem' }}>
             <p style={{ marginBottom: '0.5rem' }}>
-              <strong>Partita IVA:</strong> [INSERIRE P.IVA QUI] | <strong>C.F.:</strong> [INSERIRE C.F. QUI]
+              <strong>Partita IVA:</strong> 10282260586
             </p>
             <p style={{ marginBottom: '0.5rem' }}>
-              Sede Legale: Via Francesco Ingoli, 50, 00125 Roma RM
-            </p>
-            <p style={{ marginBottom: '0.5rem' }}>
-              [INSERIRE QUI EVENTUALI ALTRI DATI: es. numero REA, Registro Imprese]
+              Sede: Via Francesco Ingoli, 50, 00125 Roma RM
             </p>
           </div>
 
