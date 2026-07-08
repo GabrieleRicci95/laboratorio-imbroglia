@@ -164,8 +164,8 @@ function App() {
       {/* Contatti */}
       <section id="contatti" className="section bg-white">
         <div className="container">
-          <div className="contact-grid">
-            <div>
+          <div className="contact-grid" style={{ gridTemplateColumns: '1fr', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '2rem' }}>Siamo qui per te.</h2>
               <p style={{ marginBottom: '3rem', fontSize: '1.1rem', opacity: 0.9 }}>
                 Contattaci per informazioni, preventivi o per richiedere una consulenza. Il nostro laboratorio è pronto a soddisfare ogni esigenza del tuo studio dentistico.
@@ -187,16 +187,6 @@ function App() {
                 <Clock size={24} />
                 <span>Lun - Ven: 09:00 - 13:00 / 15:00 - 18:00</span>
               </div>
-            </div>
-            
-            <div style={{ backgroundColor: 'white', borderRadius: '12px', padding: '2rem', color: 'var(--text)' }}>
-              <h3 style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>Scrivici un messaggio</h3>
-              <form>
-                <input type="text" placeholder="Nome / Studio" style={{ width: '100%', padding: '1rem', marginBottom: '1rem', borderRadius: '8px', border: '1px solid var(--border)' }} />
-                <input type="email" placeholder="Email" style={{ width: '100%', padding: '1rem', marginBottom: '1rem', borderRadius: '8px', border: '1px solid var(--border)' }} />
-                <textarea placeholder="Il tuo messaggio..." rows={4} style={{ width: '100%', padding: '1rem', marginBottom: '1rem', borderRadius: '8px', border: '1px solid var(--border)' }}></textarea>
-                <button type="button" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Invia Richiesta</button>
-              </form>
             </div>
           </div>
         </div>
