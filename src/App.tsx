@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Phone, 
@@ -13,6 +14,8 @@ import {
 } from 'lucide-react';
 
 function App() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   const services = [
     {
       title: 'Protesi Fissa, Mobile e Scheletrica',
@@ -42,6 +45,33 @@ function App() {
       alt="Logo Laboratorio" 
       style={{ height: '45px', width: '45px', objectFit: 'contain', mixBlendMode: 'multiply' }} 
     />
+  );
+
+  const PrivacyModal = () => (
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 2000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+      <div style={{ backgroundColor: 'white', borderRadius: '12px', padding: '2rem', maxWidth: '800px', width: '100%', maxHeight: '90vh', overflowY: 'auto' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Privacy Policy</h2>
+        <div style={{ color: 'var(--text)', lineHeight: 1.6, marginBottom: '2rem' }}>
+          <p><strong>Ultimo aggiornamento: Luglio 2026</strong></p>
+          <br/>
+          <h3>1. Titolare del Trattamento</h3>
+          <p>Laboratorio Odontotecnico di Imbroglia Marco<br/>Via Francesco Ingoli, 50, 00125 Roma RM<br/>Email: marco.imbroglia@gmail.com</p>
+          <br/>
+          <h3>2. Dati Raccolti</h3>
+          <p>Questo sito web ha scopo puramente informativo e di vetrina. Attualmente, il sito <strong>non raccoglie dati personali in modo automatico</strong> tramite moduli di contatto, in quanto le comunicazioni avvengono direttamente tramite le applicazioni email o telefoniche del visitatore.</p>
+          <br/>
+          <h3>3. Finalità del Trattamento</h3>
+          <p>Qualora l'utente contatti volontariamente il Titolare via email o telefono, i dati forniti verranno utilizzati esclusivamente per rispondere alle richieste di informazioni o preventivi, nel rispetto dell'Art. 6 lett. b) del GDPR.</p>
+          <br/>
+          <h3>4. Cookie</h3>
+          <p>Questo sito utilizza esclusivamente <strong>cookie tecnici</strong> necessari al corretto funzionamento della piattaforma. Non vengono utilizzati cookie di profilazione o tracciamento di terze parti per scopi di marketing o di analisi.</p>
+          <br/>
+          <h3>5. Diritti dell'Utente</h3>
+          <p>In conformità con gli articoli 15-22 del GDPR, l'utente ha il diritto di accedere, rettificare, cancellare i propri dati personali, nonché di opporsi al loro trattamento, contattando il Titolare ai recapiti indicati.</p>
+        </div>
+        <button onClick={() => setShowPrivacy(false)} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Chiudi</button>
+      </div>
+    </div>
   );
 
   return (
@@ -195,15 +225,30 @@ function App() {
       {/* Footer */}
       <footer style={{ backgroundColor: 'var(--text)', color: 'white', padding: '3rem 0', textAlign: 'center' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
             <ToothLogo />
             <span style={{ fontSize: '1.5rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400 }}>Laboratorio Odontotecnico di Imbroglia Marco</span>
           </div>
-          <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>
-            © {new Date().getFullYear()} Laboratorio Odontotecnico di Imbroglia Marco. Tutti i diritti riservati.
+          
+          <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '2rem' }}>
+            <p style={{ marginBottom: '0.5rem' }}>
+              <strong>Partita IVA:</strong> [INSERIRE P.IVA QUI] | <strong>C.F.:</strong> [INSERIRE C.F. QUI]
+            </p>
+            <p style={{ marginBottom: '0.5rem' }}>
+              Sede Legale: Via Francesco Ingoli, 50, 00125 Roma RM
+            </p>
+            <p style={{ marginBottom: '0.5rem' }}>
+              [INSERIRE QUI EVENTUALI ALTRI DATI: es. numero REA, Registro Imprese]
+            </p>
+          </div>
+
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem' }}>
+            © {new Date().getFullYear()} Laboratorio Odontotecnico di Imbroglia Marco. Tutti i diritti riservati. | <button onClick={() => setShowPrivacy(true)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', textDecoration: 'underline', cursor: 'pointer', padding: 0, font: 'inherit' }}>Privacy Policy</button>
           </p>
         </div>
       </footer>
+
+      {showPrivacy && <PrivacyModal />}
     </div>
   );
 }
