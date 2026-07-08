@@ -207,12 +207,21 @@ body {
 /* Contact */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 2rem;
   background-color: var(--primary);
   color: white;
   padding: 4rem;
   border-radius: 16px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-info h3 {
@@ -223,13 +232,58 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
 
+.chi-siamo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.private-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.private-banner-text {
+  flex: 1 1 500px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+}
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .contact-grid { grid-template-columns: 1fr; padding: 2rem; }
   .hero { padding: 8rem 0 5rem; }
+  
+  .logo-text { font-size: 1.1rem; white-space: normal; }
+  .logo-container { gap: 0.5rem; }
+  
+  .chi-siamo-grid { grid-template-columns: 1fr; gap: 2rem; }
+  
+  .private-banner { flex-direction: column; text-align: center; }
+  .private-banner-text { flex: 1 1 auto; }
+  .private-banner-text > div { justify-content: center; }
+  
+  .contact-grid { padding: 2rem; }
+  .contact-item { font-size: 1rem; flex-direction: column; gap: 0.5rem; text-align: center; }
 }

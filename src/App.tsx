@@ -50,9 +50,9 @@ function App() {
       <nav className="navbar">
         <div className="container nav-content">
           <div className="logo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+            <div className="logo-container">
               <ToothLogo />
-              <span style={{ fontSize: '1.4rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400, color: 'var(--text)' }}>
+              <span className="logo-text">
                 Laboratorio Odontotecnico di Imbroglia Marco
               </span>
             </div>
@@ -95,7 +95,7 @@ function App() {
       {/* Chi Siamo */}
       <section id="chi-siamo" className="section bg-white">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="chi-siamo-grid">
             <div>
               <h2 className="section-title" style={{ textAlign: 'left' }}>L'Esperienza fa la Differenza</h2>
               <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
@@ -142,8 +142,8 @@ function App() {
       {/* Banner Privati */}
       <section style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '4rem 0', margin: '2rem 0' }}>
         <div className="container">
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
-            <div style={{ flex: '1 1 500px' }}>
+          <div className="private-banner">
+            <div className="private-banner-text">
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                 <Wrench size={36} color="var(--accent)" />
                 <h2 style={{ fontSize: '2.2rem', fontWeight: 800, margin: 0 }}>Sei un Privato? Hai un'urgenza?</h2>
@@ -164,8 +164,8 @@ function App() {
       {/* Contatti */}
       <section id="contatti" className="section bg-white">
         <div className="container">
-          <div className="contact-grid" style={{ gridTemplateColumns: '1fr', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div className="contact-grid">
+            <div className="contact-content">
               <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '2rem' }}>Siamo qui per te.</h2>
               <p style={{ marginBottom: '3rem', fontSize: '1.1rem', opacity: 0.9 }}>
                 Contattaci per informazioni, preventivi o per richiedere una consulenza. Il nostro laboratorio è pronto a soddisfare ogni esigenza del tuo studio dentistico.
