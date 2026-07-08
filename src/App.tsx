@@ -53,7 +53,7 @@ function App() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <ToothLogo />
               <span style={{ fontSize: '1.4rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400, color: 'var(--text)' }}>
-                Laboratorio Odontotecnico Imbroglia
+                Laboratorio Odontotecnico di Imbroglia Marco
               </span>
             </div>
           </div>
@@ -207,7 +207,7 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
             <ToothLogo />
-            <span style={{ fontSize: '1.5rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400 }}>Laboratorio Odontotecnico Imbroglia</span>
+            <span style={{ fontSize: '1.5rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400 }}>Laboratorio Odontotecnico di Imbroglia Marco</span>
           </div>
           <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>
             © {new Date().getFullYear()} Laboratorio Odontotecnico di Imbroglia Marco. Tutti i diritti riservati.
