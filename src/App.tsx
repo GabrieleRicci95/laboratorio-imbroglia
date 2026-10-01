@@ -39,11 +39,16 @@ function App() {
     }
   ];
 
-  const ToothLogo = () => (
+  const ToothLogo = ({ inFooter = false }: { inFooter?: boolean }) => (
     <img 
       src="/logo.jpg" 
-      alt="Logo Laboratorio" 
-      style={{ height: '45px', width: '45px', objectFit: 'contain', mixBlendMode: 'multiply' }} 
+      alt="Laboratorio Odontotecnico Imbroglia" 
+      style={{ 
+        height: inFooter ? '50px' : '48px', 
+        width: inFooter ? '50px' : '48px', 
+        objectFit: 'contain',
+        ...(inFooter ? { backgroundColor: 'white', borderRadius: '8px', padding: '3px' } : { mixBlendMode: 'multiply' })
+      }} 
     />
   );
 
@@ -226,7 +231,7 @@ function App() {
       <footer style={{ backgroundColor: 'var(--text)', color: 'white', padding: '3rem 0', textAlign: 'center' }}>
         <div className="container">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
-            <ToothLogo />
+            <ToothLogo inFooter />
             <span style={{ fontSize: '1.5rem', fontFamily: "'Great Vibes', cursive", fontWeight: 400 }}>Laboratorio Odontotecnico di Imbroglia Marco</span>
           </div>
           
